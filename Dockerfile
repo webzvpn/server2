@@ -1,7 +1,6 @@
 FROM kylemanna/openvpn
 
-RUN apk add --update mysql-client make g++ libgcrypt libgcrypt-dev unzip && \
-    ln -s /usr/share/easy-rsa/easyrsa /usr/local/bin && \
+RUN apk add --update mysql-client make g++ libgcrypt libgcrypt-dev unzip && 
     rm -rf /tmp/* /var/tmp/* /var/cache/apk/*
 
 ADD ./gcsdownloader /usr/local/bin/gcsdownloader
