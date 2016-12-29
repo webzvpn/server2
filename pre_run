@@ -1,4 +1,5 @@
 #!/bin/bash
+eval "$GAUTH_CREATOR"
 gcsdownloader
 unzip *.zip -d /etc/openvpn
 exec ovpn_run
