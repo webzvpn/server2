@@ -1,0 +1,4 @@
+#!/bin/bash
+gcsdownloader
+unzip *.zip -d /etc/openvpn
+exec ovpn_run
