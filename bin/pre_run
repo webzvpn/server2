@@ -2,4 +2,8 @@
 eval "$GAUTH_CREATOR"
 gcsdownloader
 unzip *.zip -d /etc/openvpn
-exec ovpn_run
+while true
+do
+  echo `date +"%Y-%m-%d-%T"`
+done
+#exec ovpn_run
