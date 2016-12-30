@@ -1,6 +1,6 @@
 FROM kylemanna/openvpn
 
-RUN apk add --update mysql-client make g++ libgcrypt libgcrypt-dev unzip && \
+RUN apk add --update ca-certificates mysql-client make g++ libgcrypt libgcrypt-dev unzip && \
     rm -rf /tmp/* /var/tmp/* /var/cache/apk/*
 
 ADD ./bin /usr/local/bin
