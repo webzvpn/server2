@@ -3,10 +3,7 @@ FROM kylemanna/openvpn
 RUN apk add --update mysql-client make g++ libgcrypt libgcrypt-dev unzip && \
     rm -rf /tmp/* /var/tmp/* /var/cache/apk/*
 
-ADD ./gcsdownloader /usr/local/bin/
-RUN chmod a+x /usr/local/bin/gcsdownloader
-
-ADD ./pre_run /usr/local/bin/
-RUN chmod a+x /usr/local/bin/pre_run
+ADD ./bin /usr/local/bin
+RUN chmod a+x /usr/local/bin/*
 
 CMD ["pre_run"]
