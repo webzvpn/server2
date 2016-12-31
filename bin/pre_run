@@ -1,7 +1,7 @@
 #!/bin/bash
 eval "$GAUTH_CREATOR"
 
-if [ -z "$RUN_UDP_HEALTHCHECK" ]
+if [ $RUN_UDP_HEALTHCHECK == "1" ]
 then 
   udphealthcheck > /dev/null 2>&1 &
 fi
