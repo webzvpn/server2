@@ -1,5 +1,11 @@
 #!/bin/bash
 eval "$GAUTH_CREATOR"
+
+if [ $RUN_UDP_HEALTHCHECK != '' ]
+then 
+  udphealthcheck.sh &
+fi
+
 gcsdownloader
 rm -rf /etc/openvpn/*
 unzip *.zip -d /etc/openvpn
