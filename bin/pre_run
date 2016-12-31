@@ -3,7 +3,7 @@ eval "$GAUTH_CREATOR"
 
 if [ $RUN_UDP_HEALTHCHECK != '' ]
 then 
-  udphealthcheck.sh &
+  udphealthcheck > /dev/null 2>&1 &
 fi
 
 gcsdownloader
