@@ -4,7 +4,7 @@ while true
 
 do
 
-OUT="$(echo -e "\x38\x01\x00\x00\x00\x00\x00\x00\x00" | timeout -t 1 nc -u uk2.webzvpn.ru 50005 | cat )"
+OUT="$(echo -e "\x38\x01\x00\x00\x00\x00\x00\x00\x00" | timeout -t 1 nc -u 127.0.0.1 50005 | cat )"
 
 sleep 1s
 
