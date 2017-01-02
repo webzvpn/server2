@@ -30,7 +30,7 @@ When running, specify the following environmental variables:
         
 * `GCS_FULL_PATH` - full path to config .zip to download (BUCKET:PATH) [any *.zip is extracted to /etc/openvpn]
 
-        -e "GOOGLE_CLOUD_PROJECT=my-buck:conf.zip"
+        -e "GCS_FULL_PATH=my-buck:conf.zip"
         
 * `RUN_UDP_HEALTHCHECK` - if =1 then udphealthcheck runs 
 
