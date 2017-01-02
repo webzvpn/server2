@@ -6,4 +6,4 @@ RUN apk add --update ca-certificates mysql-client make g++ libgcrypt libgcrypt-d
 ADD ./bin /usr/local/bin
 RUN chmod a+x /usr/local/bin/*
 
-CMD ["pre_run"]
+CMD ["/bin/bash", "-c", "set -e && pre_run"]
