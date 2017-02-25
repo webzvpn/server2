@@ -42,13 +42,3 @@ When running, specify the following environmental variables:
 
 * Ignore `GOOGLE_APPLICATION_CREDENTIALS`,`GOOGLE_CLOUD_PROJECT`,`GCS_FULL_PATH`
 
-### udphealthcheck
-
-* Set `RUN_UDP_HEALTHCHECK=1`
-
-* udphealthcheck will now run, send packets to check on UDP server on port 50005 (yes, only 50005 [I recommend using docker to forward ports anyway, so the internal port should not matter]) (and spam your log). If the server responds, it will start a netcal listening on tcp port 20002 and replying with what it recieves. The listenner will be killed once server stopps replying.
-
-* Now point your haproxy healthchecks (or anything else) at tcp 20002
-
-* Use in production is not reccommended (for many clear reasons). Helping create a proper udp health checker is very welcome though.
-
