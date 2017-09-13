@@ -1,5 +1,5 @@
 # Extension of [kylemanna/docker-openvpn](https://github.com/kylemanna/docker-openvpn)
-# OpenVPN server with included mysql client, tools to compile/run radius plugin
+# OpenVPN server with mysql client, tools to compile/run radius plugin included 
 The image was originally created to download config from Google Cloud Storage on start, but can download config via bash commands on start.
 
 A shellscript to check udp server health is included. It works by sending bytes to the server (Currently only on port 50005) and checking if it gets a reply. If the server replies, a netcat tcp listener is started on 20002. If the server stops responding, the listener is killed (made for haproxy healthchecks).
